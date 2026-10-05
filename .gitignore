@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / frontend
+node_modules/
+web/dist/
+web/build/
+.next/
+
+# Env & secrets
+.env
+*.local
+
+# Data stores (local dev)
+data/
+neo4j_data/
+pg_data/
+chroma_data/
+*.db
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Uploads & generated artifacts
+uploads/*.pdf
+!uploads/.gitkeep
+eval_reports/

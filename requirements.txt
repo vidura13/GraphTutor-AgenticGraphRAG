@@ -1,0 +1,10 @@
+# Convenience mirror of pyproject core deps (for teammates who prefer pip -r)
+spacy>=3.8
+pymupdf>=1.24
+pdfplumber>=0.11
+neo4j>=5.19
+chromadb>=0.5
+networkx>=3.2
+pydantic>=2.6
+pyyaml>=6.0
+python-dotenv>=1.0

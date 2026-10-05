@@ -1,0 +1,18 @@
+# Canonicalisation maps v0 — applied before canonical_key slugging. Reviewed in PRs.
+version: 0
+acronyms:
+  oop: object-oriented programming
+  dbms: database management system
+  erd: entity relationship diagram
+  sql: structured query language
+  acid: atomicity consistency isolation durability
+  uml: unified modeling language
+  fifo: first in first out
+synonyms:   # variant -> canonical concept key
+  normalisation: normalization
+  utilisation: utilization
+  queuing network: queueing-network
+  tables: relation
+  instance: object
+  bcnf: normalization
+  3nf: normalization

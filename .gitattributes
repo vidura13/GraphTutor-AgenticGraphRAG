@@ -1,0 +1,4 @@
+# Keep the repo line-ending-consistent across Windows/Linux teammates.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf

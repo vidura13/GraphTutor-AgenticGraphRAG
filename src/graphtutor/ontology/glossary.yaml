@@ -1,0 +1,62 @@
+# GraphTutor domain glossary v0 — seeds the spaCy EntityRuler (concept extraction).
+# Reviewed in PRs like code. `key` == canonical_key slug. Levels: 1 foundational · 2 core · 3 advanced.
+version: 0
+subjects:
+  - name: Object-Oriented Programming
+    concepts:
+      - {key: class, name: Class, aliases: [classes], level: 1}
+      - {key: object, name: Object, aliases: [objects, instance, instances], level: 1}
+      - {key: encapsulation, name: Encapsulation, level: 1}
+      - {key: inheritance, name: Inheritance, level: 1}
+      - {key: polymorphism, name: Polymorphism, level: 2}
+      - {key: abstraction, name: Abstraction, level: 1}
+      - {key: method-overloading, name: Method Overloading, level: 2}
+      - {key: method-overriding, name: Method Overriding, level: 2}
+      - {key: interface, name: Interface, aliases: [interfaces], level: 2}
+      - {key: abstract-class, name: Abstract Class, level: 2}
+      - {key: constructor, name: Constructor, aliases: [constructors], level: 1}
+      - {key: access-modifier, name: Access Modifier, aliases: [access modifiers], level: 1}
+      - {key: composition, name: Composition, level: 2}
+      - {key: aggregation, name: Aggregation, level: 2}
+      - {key: exception-handling, name: Exception Handling, level: 2}
+      - {key: solid-principles, name: SOLID Principles, level: 3}
+      - {key: uml-class-diagram, name: UML Class Diagram, level: 2}
+
+  - name: Database Systems
+    concepts:
+      - {key: relation, name: Relation, aliases: [relations, table, tables], level: 1}
+      - {key: primary-key, name: Primary Key, level: 1}
+      - {key: foreign-key, name: Foreign Key, level: 1}
+      - {key: candidate-key, name: Candidate Key, level: 2}
+      - {key: functional-dependency, name: Functional Dependency, aliases: [functional dependencies], level: 2}
+      - {key: normalization, name: Normalization, aliases: [normalisation, 1nf, 2nf, 3nf, bcnf], level: 2}
+      - {key: relational-algebra, name: Relational Algebra, level: 2}
+      - {key: sql, name: SQL, aliases: [structured query language], level: 1}
+      - {key: join, name: Join, aliases: [joins, inner join, outer join], level: 2}
+      - {key: index, name: Index, aliases: [indexes, indexing], level: 2}
+      - {key: b-plus-tree, name: B+ Tree, aliases: [b+ tree, b tree], level: 3}
+      - {key: transaction, name: Transaction, aliases: [transactions], level: 2}
+      - {key: acid-properties, name: ACID Properties, aliases: [acid], level: 2}
+      - {key: isolation-level, name: Isolation Level, level: 3}
+      - {key: deadlock, name: Deadlock, aliases: [deadlocks], level: 3}
+      - {key: er-model, name: ER Model, aliases: [entity relationship model, er diagram], level: 1}
+      - {key: view, name: View, aliases: [views], level: 2}
+      - {key: stored-procedure, name: Stored Procedure, level: 3}
+
+  - name: Performance Modelling
+    concepts:
+      - {key: queue, name: Queue, aliases: [queues, waiting line], level: 1}
+      - {key: arrival-rate, name: Arrival Rate, aliases: [lambda], level: 1}
+      - {key: service-rate, name: Service Rate, aliases: [mu], level: 1}
+      - {key: utilization, name: Utilization, aliases: [utilisation, rho], level: 2}
+      - {key: littles-law, name: Little's Law, level: 2}
+      - {key: mm1-queue, name: M/M/1 Queue, aliases: [m/m/1], level: 2}
+      - {key: poisson-process, name: Poisson Process, level: 2}
+      - {key: markov-chain, name: Markov Chain, aliases: [markov chains], level: 3}
+      - {key: throughput, name: Throughput, level: 1}
+      - {key: response-time, name: Response Time, level: 1}
+      - {key: bottleneck, name: Bottleneck, aliases: [bottlenecks], level: 2}
+      - {key: queueing-network, name: Queueing Network, aliases: [queuing network], level: 3}
+      - {key: operational-analysis, name: Operational Analysis, level: 3}
+      - {key: petri-net, name: Petri Net, aliases: [petri nets], level: 3}
+      - {key: discrete-event-simulation, name: Discrete-Event Simulation, level: 2}

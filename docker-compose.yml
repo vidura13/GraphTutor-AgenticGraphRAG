@@ -1,0 +1,29 @@
+# Shared local dev services. ChromaDB runs embedded in-app (no container needed).
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: gt-neo4j
+    ports:
+      - "7474:7474"   # Browser
+      - "7687:7687"   # Bolt
+    environment:
+      NEO4J_AUTH: neo4j/graphtutor_dev
+      NEO4J_dbms_memory_heap_initial__size: 512m
+    volumes:
+      - neo4j_data:/data
+
+  postgres:
+    image: postgres:16
+    container_name: gt-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: graphtutor
+      POSTGRES_PASSWORD: graphtutor_dev
+      POSTGRES_DB: graphtutor
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  neo4j_data:
+  pg_data:

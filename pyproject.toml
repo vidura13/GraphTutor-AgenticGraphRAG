@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphtutor"
+version = "0.1.0"
+description = "Agentic GraphRAG system with probabilistic mastery tracking for computing exam preparation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "TBD-by-team" }
+dependencies = [
+    "spacy>=3.8",
+    "pymupdf>=1.24",
+    "pdfplumber>=0.11",
+    "neo4j>=5.19",
+    "chromadb>=0.5",
+    "networkx>=3.2",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"graphtutor.ontology" = ["*.cypher", "*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]

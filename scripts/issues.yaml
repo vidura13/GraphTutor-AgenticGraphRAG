@@ -1,0 +1,61 @@
+# S0 + SRS backlog. Created once via: python scripts/create_issues.py --repo OWNER/REPO
+labels:
+  - {name: "area:kg", color: "0e8a16"}
+  - {name: "area:nlp", color: "55aa55"}
+  - {name: "area:backend", color: "1d76db"}
+  - {name: "area:ai", color: "5319e7"}
+  - {name: "area:frontend", color: "fbca04"}
+  - {name: "area:qa", color: "d4c5f9"}
+  - {name: "area:ops", color: "cccccc"}
+  - {name: "type:feat", color: "006b75"}
+  - {name: "type:bug", color: "d93f0b"}
+  - {name: "type:doc", color: "bfd4f2"}
+  - {name: "priority:P0", color: "b60205"}
+  - {name: "priority:P1", color: "fbc002"}
+
+issues:
+  - title: "[S0] Enable branch protection on main & develop"
+    labels: [area:ops, priority:P0]
+    body: "Apply scripts/protection.json to both branches (docs/PUSH_GUIDE.md §2). AC: direct push to develop is rejected."
+  - title: "[S0] Onboard all 5 members (env + first PR)"
+    labels: [area:ops, priority:P0]
+    body: "Each member completes docs/TEAM_WORKFLOW.md onboarding checklist and merges the CONTRIBUTORS.md PR."
+  - title: "[S0] Collect dev-corpus PDFs (OOP / DBMS / Performance Modelling)"
+    labels: [area:kg, area:qa, priority:P0]
+    body: "Gather text-based slides/notes/past papers per subject; log provenance in docs/corpus.md. Reject image-only scans."
+  - title: "[S0] Team sign-off: SRS v0"
+    labels: [area:ops, type:doc, priority:P0]
+    body: "Review docs/SRS.md; every member confirms ownership + acceptance criteria of their stories."
+  - title: "[S0] Team sign-off: ontology v0 + ADR-0001 (forking model)"
+    labels: [area:kg, area:backend, type:doc, priority:P0]
+    body: "Review docs/ontology.md + docs/adr/0001. Flip ADR status to ACCEPTED when M01+M02 agree."
+  - title: "[US-01] Upload study materials & trigger ingestion"
+    labels: [area:kg, area:backend, type:feat, priority:P0]
+    body: "SRS US-01. M01 pipeline entry point + M02 REST/JWT wrapper."
+  - title: "[US-02] Deterministic concept & prerequisite extraction (≥90% recall)"
+    labels: [area:kg, area:nlp, type:feat, priority:P0]
+    body: "SRS US-02. Stages 3–5 of docs/architecture.md + eval harness vs gold set."
+  - title: "[US-03] Curriculum sharing via graph-forking"
+    labels: [area:backend, type:feat, priority:P1]
+    body: "SRS US-03. ACL endpoints over canonical graph (ADR-0001)."
+  - title: "[US-04] Diagnostic quiz via CAT graph search"
+    labels: [area:ai, type:feat, priority:P0]
+    body: "SRS US-04. Frontier targeting over PREREQUISITE_OF + stopping rule."
+  - title: "[US-05] BKT mastery update on answer submission"
+    labels: [area:ai, area:backend, type:feat, priority:P0]
+    body: "SRS US-05. Per-user Postgres rows; monotone-consistency unit test."
+  - title: "[US-06] Misconception remediation agent (LangGraph, guarded)"
+    labels: [area:ai, type:feat, priority:P1]
+    body: "SRS US-06. Cyclic state machine, Pydantic guardrails, graph-scoped retrieval."
+  - title: "[US-07] Sinhala/Tamil terminology mapping layer"
+    labels: [area:ai, type:feat, priority:P1]
+    body: "SRS US-07. Reviewable YAML mapping table, not free-form translation."
+  - title: "[US-08] Force-directed progress heatmap"
+    labels: [area:frontend, type:feat, priority:P0]
+    body: "SRS US-08. Consumes graph-snapshot JSON (schema co-defined with M01 in S6)."
+  - title: "[US-09] IRT exam-readiness score"
+    labels: [area:ai, type:feat, priority:P1]
+    body: "SRS US-09."
+  - title: "[US-10] SimPy validation with virtual students"
+    labels: [area:qa, type:feat, priority:P0]
+    body: "SRS US-10. Must ingest through the same entry point as real uploads."
