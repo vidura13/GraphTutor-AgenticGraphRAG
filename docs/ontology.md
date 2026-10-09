@@ -38,6 +38,13 @@ CREATE INDEX section_doc_idx     IF NOT EXISTS FOR (s:Section) ON (s.doc_id);
 All writes use `MERGE` ⇒ idempotent ingestion; cross-document concept recurrence increments
 `source_count` instead of duplicating nodes.
 
+Apply & seed (S1 tooling):
+
+```bash
+python -m graphtutor.graph.schema     # constraints/indexes, IF NOT EXISTS everywhere
+python -m graphtutor.ontology.seed    # OOP mini-graph: 18 concepts, 16 prereq edges
+```
+
 ## 4. Integrity rules (enforced in code before write — S1)
 
 1. **DAG**: reject any `PREREQUISITE_OF` edge creating a cycle.

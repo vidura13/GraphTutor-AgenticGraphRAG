@@ -46,6 +46,10 @@ cp .env.example .env                                   # adjust if needed
 
 # 3. verify
 pytest tests/unit -q
+
+# 4. database schema + shared dev fixture (S1)
+python -m graphtutor.graph.schema       # apply constraints/indexes (idempotent)
+python -m graphtutor.ontology.seed      # load the OOP mini-graph
 ```
 
 Neo4j Browser: http://localhost:7474 (user `neo4j`, password `graphtutor_dev`).

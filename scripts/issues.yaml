@@ -59,3 +59,9 @@ issues:
   - title: "[US-10] SimPy validation with virtual students"
     labels: [area:qa, type:feat, priority:P0]
     body: "SRS US-10. Must ingest through the same entry point as real uploads."
+  - title: "[S3+] Extend glossary & corpus to additional owned subjects"
+    labels: [area:kg, area:nlp, type:feat, priority:P1]
+    body: >
+      Lead owns PDFs for 10 subjects. MVP gold set = OOP, Data Modelling & DB Systems,
+      Performance Modelling (the proposal simulation triad). Afterwards extend glossary.yaml
+      and gold annotations to DSA, OOD, STQA, InfoSec, Data Science, Intro AI, UX.
