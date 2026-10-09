@@ -15,7 +15,7 @@ def _reachable() -> bool:
 
     try:
         with GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD)) as d:
-            d.verify_connectivity(timeout=3)
+            d.verify_connectivity()
         return True
     except Exception:
         return False
